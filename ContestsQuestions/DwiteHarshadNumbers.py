@@ -26,8 +26,8 @@ def isHarshad(n):
 		return True
 	return False
 
-low = 80
-high = 100
+low = 500
+high = 525
 streak = 0
 maxStreak = 0
 
