@@ -50,3 +50,4 @@ for line in f:
 	h = f.readline()
 	findHarshad(l,h)
 
+f.close()

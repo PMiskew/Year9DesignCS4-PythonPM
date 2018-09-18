@@ -16,17 +16,17 @@ def calculate(*args):
 
 root = tk.Tk()
 
-lx1 = tk.Label(root,text = "x1")
-ex1 = tk.Entry(root)
+lx1 = tk.Label(root,text = "x1", padx = 10, pady = 10)
+ex1 = tk.Entry(root, padx = 10)
 
-ly1 = tk.Label(root,text = "y1")
-ey1 = tk.Entry(root)
+ly1 = tk.Label(root,text = "y1", padx = 10, pady = 10)
+ey1 = tk.Entry(root, padx = 10)
 
-lx2 = tk.Label(root,text = "x2")
-ex2 = tk.Entry(root)
+lx2 = tk.Label(root, text = "x2", padx = 10, pady = 10)
+ex2 = tk.Entry(root, padx = 10)
 
-ly2 = tk.Label(root,text = "y2")
-ey2 = tk.Entry(root)
+ly2 = tk.Label(root,text = "y2", padx = 10, pady = 10)
+ey2 = tk.Entry(root, padx = 10)
 
 submitBtn = tk.Button(root, text = "Submit", command = calculate)
 
