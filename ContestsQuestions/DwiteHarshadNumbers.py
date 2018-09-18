@@ -26,18 +26,27 @@ def isHarshad(n):
 		return True
 	return False
 
-low = 500
-high = 525
-streak = 0
-maxStreak = 0
 
-for i in range(low,high + 1,1):
-	if (isHarshad(i)):
-		streak = streak + 1;
-	else:
-		maxStreak = max(streak,maxStreak)
-		streak = 0;
-	#print(i,streak) #Test code for debugging
+def findHarshard(low, high):
+	low = 500
+	high = 525
+	streak = 0
+	maxStreak = 0
 
-maxStreak = max(streak,maxStreak)
-print(maxStreak)
+	for i in range(low,high + 1,1):
+		if (isHarshad(i)):
+			streak = streak + 1;
+		else:
+			maxStreak = max(streak,maxStreak)
+			streak = 0;
+		#print(i,streak) #Test code for debugging
+
+	maxStreak = max(streak,maxStreak)
+	print(maxStreak)
+
+f = open("DwiteHarshadNumbersData.txt", "r")
+for line in f:
+	l = f.readline()
+	h = f.readline()
+	findHarshard(l,h)
+
