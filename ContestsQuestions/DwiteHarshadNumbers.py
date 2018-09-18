@@ -27,7 +27,7 @@ def isHarshad(n):
 	return False
 
 
-def findHarshard(low, high):
+def findHarshad(low, high):
 	low = 500
 	high = 525
 	streak = 0
@@ -48,5 +48,5 @@ f = open("DwiteHarshadNumbersData.txt", "r")
 for line in f:
 	l = f.readline()
 	h = f.readline()
-	findHarshard(l,h)
+	findHarshad(l,h)
 

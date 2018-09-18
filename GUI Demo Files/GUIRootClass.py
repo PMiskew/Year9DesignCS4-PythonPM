@@ -10,20 +10,6 @@ class Display:
 		print("Running Constructor")
 		self.root = tk.Tk()
 
-		#Step 1: Create an instance of the widget
-		self.labelx1 = tk.Label(self.root,text="x1")
-		self.entryx1 = tk.Entry(self.root)
-
-		#Step 2: Pack the widget
-		self.labelx1.pack()
-		self.entryx1.pack()
-
-		#use a normal pack
-		#use a grid layoumanager
-
-
-
-
 		self.root.mainloop()
 		print("DONE")
 
