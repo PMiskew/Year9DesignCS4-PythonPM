@@ -10,7 +10,7 @@
 # 	in Python we use //.  For example 723//10 = 72.  This is 
 # 	a quick way to remove decimals. 
 
-#Hi Nikhil
+
 def findSum(n):
 	s = 0	#store the sum of the values
 	while (n > 0):
