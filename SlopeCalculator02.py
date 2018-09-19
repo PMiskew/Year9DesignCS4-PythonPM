@@ -5,6 +5,8 @@ print("****Slope Calculator****")
 #decimals - float
 #integers - int
 
+
+
 #Input
 x1 = input("Input x1: ")
 x1 = int(x1) #casting
@@ -22,10 +24,31 @@ y2 = int(y2)
 rise = x2 - x1
 run = y2 - y1
 
+fSlope = rise/run #real numbers are called float
 
+#Three types to consider
+#Strings - Store collections of characters
+# result = str(<value>)
+#integers - Store integer values
+# result = int(<value>)
+#floats - Store real numbers
+# result = float(<value>)
 
 
 
 #Output
+print("Your slope is m = "+str(rise)+"/"+str(run))
+print("Your slope as a decimal is ",fSlope)
 print(rise)
 print(run)
+
+
+
+
+
+
+
+
+
+
+
