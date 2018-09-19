@@ -13,4 +13,5 @@ print("Hi, "+fName+" "+lName)
 initialName = fName[0] + " . " + lName #adding strings is concatination 
 print("Hi, "+initialName)
 
+#os is a module that holds system function
 os.system("say "+fName+" "+lName)
