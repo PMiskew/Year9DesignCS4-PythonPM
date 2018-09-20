@@ -12,7 +12,7 @@ def calculate(*args):
 	y2 = ey2.get()
 
 	print(x1)
-
+#FIX ERROR
 
 root = tk.Tk()
 
