@@ -1,4 +1,2 @@
 import os
-
-while(True):
-	os.system("say hi")
+os.system("say hi")
