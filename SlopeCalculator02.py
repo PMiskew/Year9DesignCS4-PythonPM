@@ -36,13 +36,13 @@ fSlope = rise/run #real numbers are called float
 #floats - Store real numbers
 # result = float(<value>)
 
-
-
 #Output
 print("Your slope is m = "+str(rise)+"/"+str(run))
 print("Your slope as a decimal is ",fSlope)
+os.system("say Your slope as a decimal is "+str(fSlope))
 print(rise)
 print(run)
+#change
 
 
 
