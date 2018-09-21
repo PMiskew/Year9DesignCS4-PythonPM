@@ -7,7 +7,7 @@ print("****Slope Calculator****")
 
 
 
-#Input
+#Input - CHANGE
 x1 = input("Input x1: ")
 x1 = int(x1) #casting
 
