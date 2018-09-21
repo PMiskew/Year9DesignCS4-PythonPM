@@ -1,3 +1,5 @@
+import os 
+
 print("****Slope Calculator****")
 #Python always assumes that your input is a
 #a string unless you tell it. 
@@ -6,7 +8,7 @@ print("****Slope Calculator****")
 #integers - int
 
 
-
+os.system("say Hello welcome to my slope calculator")
 #Input - CHANGE
 x1 = input("Input x1: ")
 x1 = int(x1) #casting
