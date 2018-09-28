@@ -1,6 +1,7 @@
 #This is an example of a slope calculator as 
 
 import tkinter as tk
+from tkinter import ttk
 
 def calculate(*args):
 
@@ -28,7 +29,7 @@ ex2 = tk.Entry(root, padx = 10)
 ly2 = tk.Label(root,text = "y2", padx = 10, pady = 10)
 ey2 = tk.Entry(root, padx = 10)
 
-submitBtn = tk.Button(root, text = "Submit", command = calculate)
+submitBtn = tk.Button(root, text = "Submit", command = calculate, activebackground = "red")
 
 result = tk.Text(root, width = 20, height = 20, borderwidth=3, relief=tk.GROOVE)
 result.config(state = "disabled")
