@@ -45,9 +45,26 @@ def findHarshad(low, high):
 	print(maxStreak)
 
 f = open("DwiteHarshadNumbersData.txt", "r")
+#Python short cut which loops as long as there is a new line in the file
 for line in f:
 	l = f.readline()
 	h = f.readline()
 	findHarshad(l,h)
 
 f.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
