@@ -23,7 +23,7 @@ btn2.config(width = 5, height = 5)
 btn2.grid(row = 1, column = 1, sticky = "NESW")
 
 btn3 = tk.Button(root, text = "3")
-btn3.config(width = 5, height = 5)
+btn3.config(width = 5, height = 5, )
 btn3.grid(row = 2, column = 0, sticky = "NESW")
 
 btn4 = tk.Button(root, text = "4")

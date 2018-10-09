@@ -12,7 +12,7 @@ def runme():
 	for i in range(len(str) - 1, -1, -1):
 		strRev = strRev + str[i]
 
-	label.configure(text)
+	label.configure(text = strRev)
 #root is a variable that holds the information
 #about the main window.  That is the window
 #with the close, min, max buttons in the top 
