@@ -21,13 +21,7 @@ btn.grid(row = 2, column = 0)
 
 output = tk.Text(root)
 output.configure(state = "disable", bg = "black")
-output.grid(row = 0, column = 1, rowspan = 3)
-
-
-
-
-
-
+output.grid(row = 0, column = 1, rowspan = 3, sticky = "NESW")
 
 
 root.mainloop()
