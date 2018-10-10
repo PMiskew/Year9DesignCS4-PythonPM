@@ -101,40 +101,41 @@ for i in range(incy,500,incy):
 
 
 #Optimization 2: We can use two concepts here
-#1. A loop to manage position
+#1. A loop to manage position of the letters.  I noticed that
+#	there was a pattern for each line 50, 150, 250, 350, 450
+#	I set the loop parameters so that it counted through those 
+#	values and used them for the x position of the letters
+#2. All characters are mapped to integer values.  This is 
+#	standardized across all languages.  
+#	To change a char to an int we use the ord function
+#	ord('a') --> 97
+#	To change an int to a char we use the chr function
+#	chr(97) --> 'a'
+#	This is called casting, which is the process of changing
+#	one type to another. 
+#	How can we use this? 
+#	Since we know that there is a pattern in the letters being
+#	displayed we can set up a counter using their decimal (int)
+#	value, stated in the ASCII table. 
+#	http://www.asciitable.com/
+#	values ord("A") --> 65
+#	values ord("F") --> 65 + 5
+#	values ord("K") --> 65 + 10
+#	values ord("P") --> 65 + 15
+#	values ord("U") --> 65 + 20
+#	We create a decValue to keep track of the decimal value
+#	and we create a ctr value to move increase the decValue 
+#	each time the loop runs.  
 
-for i in range(50,500,50):
-	
-canvas.create_text(50,50, text = "A")
-canvas.create_text(150,50, text = "B")
-canvas.create_text(250,50, text = "C")
-canvas.create_text(350,50, text = "D")
-canvas.create_text(450,50, text = "E")
-
-canvas.create_text(50,150, text = "F")
-canvas.create_text(150,150, text = "G")
-canvas.create_text(250,150, text = "H")
-canvas.create_text(350,150, text = "I")
-canvas.create_text(450,150, text = "J")
-
-canvas.create_text(50,250, text = "K")
-canvas.create_text(150,250, text = "L")
-canvas.create_text(250,250, text = "M")
-canvas.create_text(350,250, text = "N")
-canvas.create_text(450,250, text = "O")
-
-canvas.create_text(50,350, text = "P")
-canvas.create_text(150,350, text = "Q")
-canvas.create_text(250,350, text = "R")
-canvas.create_text(350,350, text = "S")
-canvas.create_text(450,350, text = "T")
-
-
-canvas.create_text(50,450, text = "U")
-canvas.create_text(150,450, text = "V")
-canvas.create_text(250,450, text = "W")
-canvas.create_text(350,450, text = "X")
-canvas.create_text(450,450, text = "Y")
+decValue = 65
+ctr = 0
+for i in range(50,500,100):
+	canvas.create_text(i,50, text = chr(decValue + ctr))
+	canvas.create_text(i,150, text = chr(decValue + 5 + ctr))
+	canvas.create_text(i,250, text = chr(decValue + 10 + ctr))
+	canvas.create_text(i,350, text = chr(decValue + 15 + ctr))
+	canvas.create_text(i,450, text = chr(decValue + 20 + ctr))
+	ctr = ctr + 1
 
 canvas.bind("<Enter>",mouseEnter)
 canvas.bind("<Motion>",mouseMove)
