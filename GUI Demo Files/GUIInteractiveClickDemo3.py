@@ -4,11 +4,14 @@ import tkinter as tk
 #has been optimized for better algorithm design. 
 
 def mouseClicked(event):
+	#Optimization 3: I changed the if statements to elif statements
+	#this means that once one condition is satisfied the other conditions
+	#don't have to be evaluated. 
 	if (event.x > 100 and event.x < 200 and event.y > 100 and event.y < 200 ):
 		canvas.config(bg = "blue")
-	if (event.x > 300 and event.x < 400 and event.y > 200 and event.y < 300 ):
+	elif (event.x > 300 and event.x < 400 and event.y > 200 and event.y < 300 ):
 		canvas.config(bg = "yellow")
-	if (event.x > 0 and event.x < 100 and event.y > 400 and event.y < 500 ):
+	elif (event.x > 0 and event.x < 100 and event.y > 400 and event.y < 500 ):
 		canvas.config(bg = "red")
 	
 def mouseEnter(event):
@@ -24,63 +27,49 @@ def mouseMove(event):
 	x = event.x
 	y = event.y
 
-	if (y > 0 and y <= 100):
-		if (x <= 100):
-			print("A")
-		elif (x <= 200):
-			print("B")
-		elif (x <= 300):
-			print("C")
-		elif (x <= 400):
-			print("D")
-		elif (x <= 500):
-			print("E")
-	elif (y > 100 and y <= 200):
-		if (x <= 100):
-			print("F")
-		elif (x <= 200):
-			print("G")
-		elif (x <= 300):
-			print("H")
-		elif (x <= 400):
-			print("I")
-		elif (x <= 500):
-			print("J")
-	elif (y > 200 and y <= 300):
-		if (x <= 100):
-			print("K")
-		elif (x <= 200):
-			print("L")
-		elif (x <= 300):
-			print("M")
-		elif (x <= 400):
-			print("N")
-		elif (x <= 500):
-			print("O")
-	elif (y > 300 and y <= 400):
-		if (x <= 100):
-			print("P")
-		elif (x <= 200):
-			print("Q")
-		elif (x <= 300):
-			print("R")
-		elif (x <= 400):
-			print("S")
-		elif (x <= 500):
-			print("T")
-	elif (y > 400 and y <= 500):
-		if (x <= 100):
-			print("U")
-		elif (x <= 200):
-			print("V")
-		elif (x <= 300):
-			print("W")
-		elif (x <= 400):
-			print("X")
-		elif (x <= 500):
-			print("Y")
-		
 
+	#print(x//100)
+	#print(y//100)
+	#Optimization 4:  We can reduce all the code in this section to three lines
+	#We need to leverage 
+	#	1) 2D Lists
+	#	A two 2D list is a way to collect data of the same type in a row and column format
+	list = [["A","B","C","D","E"],["F","G","H","I","J"],["K","L","M","N","O"],["P","Q","R","S","T"],["U","V","W","X","Y"]]
+	#	The above list can be visualize as and we can image it in rows and columns
+	#			 columns
+	#	 	  0  1  2  3  4
+	# 		0 A  B  C  D  E
+	#  		1 F  G  H  I  J
+	# rows	2 K  L  M  N  O
+	#  		3 P  Q  R  S  T
+	#  		4 U  V  W  X  Y
+	#	
+	#  Letter H is located in row 1 column 2 so we access it by writing 
+	#  list[1][2]
+	#
+	#	2) Interger Division
+	#		Integer divison is when we divide an leave off the decimals.  In python we indicate
+	#		integer division using //
+	#			
+	#			Examples:
+	#				11//2 = 5
+	#				17//5 = 3
+	#				9//10 = 0
+	#
+	#		If we integer divide the x and y position of the mouse by 100 we get the row and column index
+	#		of the letter in the list
+	#		
+	#			Example:
+	#				event.x = 234
+	#				event.y = 122
+	#				This puts us in L square location (2,1)
+	#				234//100 = 2
+	#				122//100 = 1
+	#				by integer dividing by 100 we get the row and column
+	row = y//100
+	col = x//100
+	print(list[row][col])
+	
 def mouseLeave(event):
 	print("Leaving")
 
@@ -145,6 +134,8 @@ for i in range(50,500,100):
 	canvas.create_text(i,450, text = chr(decValue + 20 + ctr))
 	ctr = ctr + 1
 
+#Because these are unique lines that patterning isn't as easy I left
+#them unchanged
 canvas.create_text(150,165, text = "clickable - B")
 canvas.create_text(350,265, text = "clickable - Y")
 canvas.create_text(50,465, text = "clickable - R")
