@@ -3,6 +3,14 @@ import tkinter as tk
 #This example is the same cade of Demo2, but the code 
 #has been optimized for better algorithm design. 
 
+def mouseClicked(event):
+	if (event.x > 100 and event.x < 200 and event.y > 100 and event.y < 200 ):
+		canvas.config(bg = "blue")
+	if (event.x > 300 and event.x < 400 and event.y > 200 and event.y < 300 ):
+		canvas.config(bg = "yellow")
+	if (event.x > 0 and event.x < 100 and event.y > 400 and event.y < 500 ):
+		canvas.config(bg = "red")
+	
 def mouseEnter(event):
 	print("Enter")
 
@@ -137,9 +145,14 @@ for i in range(50,500,100):
 	canvas.create_text(i,450, text = chr(decValue + 20 + ctr))
 	ctr = ctr + 1
 
+canvas.create_text(150,165, text = "clickable - B")
+canvas.create_text(350,265, text = "clickable - Y")
+canvas.create_text(50,465, text = "clickable - R")
+
 canvas.bind("<Enter>",mouseEnter)
 canvas.bind("<Motion>",mouseMove)
 canvas.bind("<Leave>",mouseLeave)
+canvas.bind("<Button-1>",mouseClicked)
 
 root.mainloop()
 

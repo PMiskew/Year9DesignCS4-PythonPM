@@ -5,6 +5,14 @@ import tkinter as tk
 #This is considered POOR CODE DESIGN.  See demo3 for an 
 #updated more efficent design
 
+def mouseClicked(event):
+	if (event.x > 100 and event.x < 200 and event.y > 100 and event.y < 200 ):
+		canvas.config(bg = "blue")
+	if (event.x > 300 and event.x < 400 and event.y > 200 and event.y < 300 ):
+		canvas.config(bg = "yellow")
+	if (event.x > 0 and event.x < 100 and event.y > 400 and event.y < 500 ):
+		canvas.config(bg = "red")
+	
 def mouseEnter(event):
 	print("Enter")
 
@@ -131,6 +139,7 @@ canvas.create_text(450,450, text = "Y")
 canvas.bind("<Enter>",mouseEnter)
 canvas.bind("<Motion>",mouseMove)
 canvas.bind("<Leave>",mouseLeave)
+canvas.bind("<Button-1>",mouseClicked)
 
 root.mainloop()
 
