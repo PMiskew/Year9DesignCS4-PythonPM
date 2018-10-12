@@ -136,6 +136,11 @@ canvas.create_text(250,450, text = "W")
 canvas.create_text(350,450, text = "X")
 canvas.create_text(450,450, text = "Y")
 
+
+canvas.create_text(150,165, text = "clickable - B")
+canvas.create_text(350,265, text = "clickable - Y")
+canvas.create_text(50,465, text = "clickable - R")
+
 canvas.bind("<Enter>",mouseEnter)
 canvas.bind("<Motion>",mouseMove)
 canvas.bind("<Leave>",mouseLeave)
