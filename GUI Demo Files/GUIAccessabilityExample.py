@@ -23,12 +23,26 @@ def changeStateFont(*args):
 		cbox1.config(font=("Courier", 20))
 		cbox2.config(font=("Courier", 20))
 
+#create main window
 root = tk.Tk()
 
+#An IntVar is a special variable that we "link" to an element
+#as we change the element the IntVar will toggle between values
+#in this case it will go between 0 (no check) and 1 (check)
 var1 = tk.IntVar()
+#Creates our checkbox element
 cbox1 = tk.Checkbutton(root, text="High Contrast", variable=var1)
+#configure the font type and size
 cbox1.config(font=("Courier", 20))
+#Tracing a var like this means that we can run a function
+#when something happens.  The "w" means that when the 
+#variable is written to, changed, we will run the changeStateContrast
+#function. The change is automatically made when the checkbox is selected
+#since we have linked var1 to cbox1
 var1.trace("w",changeStateContrast)
+#We have packed the cbox into the root.  Including the named parameter
+#fill = "both" means the two checkboxs will have the same dimensions meaning
+#
 cbox1.pack(fill = "both")
 
 var2 = tk.IntVar()
