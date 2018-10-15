@@ -12,5 +12,11 @@ d = int(input(""))
 
 
 #Process
+if (a == 8 or a == 9) or (b == c) or (d == 8 or d == 9):
+	print("ignore")
+else:
+	print("answer")
+
+
 
 #Output
