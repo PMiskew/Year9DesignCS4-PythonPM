@@ -3,7 +3,6 @@ PHASE 2:
 
 In this Phase we will 
 - place a standar image on each of the buttons 
-- change the config of the button so it looks raised
 
 
 '''

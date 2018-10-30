@@ -11,8 +11,11 @@ In this Phase we will
 import tkinter as tk
 
 
+#By giving clicked a parameter that we can pass a value to
+#we can check which button is clicked
 def clicked(e):
 
+	#check e with an if statement and set the appropriate button image
 	if (e == 1):
 		btn1.config(image = photoCheck)
 	elif (e == 2):
@@ -20,7 +23,7 @@ def clicked(e):
 	elif (e == 3):
 		btn3.config(image = photoCheck)
 	elif (e == 4):
-		btn4.config(image = photoCheck)
+		btn4a.config(image = photoCheck)
 #creating the main window.  To do this
 #we need to call the Tk() funciton
 root = tk.Tk()

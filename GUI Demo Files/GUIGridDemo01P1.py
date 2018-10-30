@@ -1,3 +1,9 @@
+'''
+PHASE 1:
+
+This was completed in class to teach the basics of the grid layout. 
+
+'''
 #tkinter is a module that holds all the function
 #that let us easily make GUI elements
 import tkinter as tk
