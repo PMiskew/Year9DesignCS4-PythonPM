@@ -9,9 +9,11 @@ print(result)
 #Part 2:
 biasCheck = [0,0,0,0,0,0]
 
+
 for i in range(0,len(result),1):
 	biasCheck[result[i] - 1] = biasCheck[result[i] - 1] + 1
-
+#Not Efficent (BAD CODE- GOOD LEARNING)
+'''
 tolerance = 20
 bias = False
 for i in range(0, len(biasCheck),1):
@@ -21,3 +23,14 @@ for i in range(0, len(biasCheck),1):
 
 print(biasCheck)
 print(bias)
+total = 0
+
+#'''
+
+#Good Code:
+for i in range(0,len(biasCheck),1):
+	total = total + biasCheck[i]
+
+print(total/6)
+
+
