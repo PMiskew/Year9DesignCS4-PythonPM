@@ -22,7 +22,11 @@ for i in range(0, len(biasCheck),1):
 			bias = True
 
 print(biasCheck)
-print(bias)
+
+if bias == False:
+	print("NON-BIASED")
+else:
+	print("BIASED")
 
 
 #'''
@@ -32,6 +36,12 @@ total = 0
 for i in range(0,len(biasCheck),1):
 	total = total + biasCheck[i]
 
-print(total/6)
+tolerance = 20
+average = total / 6
+if abs(average - 100) < tolerance:
+	print("NON-BIASED")
+else:
+	print("BIASED")
+
 
 
