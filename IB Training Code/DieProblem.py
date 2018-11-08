@@ -2,7 +2,7 @@ import random
 result = []
 #Part 1:
 for i in range(0,5,1):
-	for j in range(0,100,1):
+	for j in range(0,10000,1):
 		result.append(random.randint(1,6))
 
 print(result)
@@ -23,11 +23,12 @@ for i in range(0, len(biasCheck),1):
 
 print(biasCheck)
 print(bias)
-total = 0
+
 
 #'''
 
 #Good Code:
+total = 0
 for i in range(0,len(biasCheck),1):
 	total = total + biasCheck[i]
 
