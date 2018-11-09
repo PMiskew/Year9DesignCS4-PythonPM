@@ -1,5 +1,10 @@
-import xml.etree.ElementTree
-e = xml.etree.ElementTree.parse('data.xml').getroot()
+import xml.etree.ElementTree as ET
+tree = ET.parse('data.xml')
+root = tree.getroot()
+print(root.tag)
 
-for atype in e.findall('type'):
-    print(atype.get('foobar'))
+for child in root:
+	print(child.tag, child.attrib)
+
+print("*******")
+print(root[0][1].text)
