@@ -4,12 +4,13 @@ def submit():
 	print("Submit pressed")
 	list.append(ent.get())
 	print(list)
+	lab.config(text = "Changed")
+
 
 #This function will parse a string and
 #add a new element to the list for all
 #values 
-def parseAdd(c):
-	
+
 
 
 #creates an empty list
