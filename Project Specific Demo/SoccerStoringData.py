@@ -9,4 +9,5 @@ for i in range(0, len(players),1):
 	print(str(i)+": "+players[i])
 
 choice = input("What player do you want to see total goals: ")
-print(players[choice] +" has ",goals[choice]," goals this year")
+choice = int(choice)
+print(players[choice] +" has "+str(goals[choice])+" goals this year")
