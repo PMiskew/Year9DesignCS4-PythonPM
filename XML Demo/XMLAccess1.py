@@ -1,3 +1,4 @@
+#Not Recommended
 from xml.dom import minidom
 xmldoc = minidom.parse('data1.xml')
 itemlist = xmldoc.getElementsByTagName('item')

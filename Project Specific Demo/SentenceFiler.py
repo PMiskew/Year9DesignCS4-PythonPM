@@ -5,3 +5,6 @@ newSentence = ""
 #Approach 1
 newSentence = sentence.replace(word,"")
 print("Sentence is: "+newSentence)
+
+#Alternate Approach
+#We coudl use a loop to search for the instance and remove itfdasfsd

@@ -9,5 +9,6 @@ foods = [food1,food2,food3] #Data Strucutre
 
 #Output - We want to sort our list in our program
 foods.sort()
+print(foods1)
 print(foods)
 

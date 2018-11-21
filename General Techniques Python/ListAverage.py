@@ -9,14 +9,16 @@ print("2. Lowest Value ")
 print("3. Average")
 choice = int(input("Input: "))
 
+
 #How do I find the average of a list of numbers
-total = 0
+if choice == 3:
+	total = 0
 
-for i in range(0,len(goldValue),1):
-	total = total + goldValue[i]
+	for i in range(0,len(goldValue),1):
+		total = total + goldValue[i]
 
-average = total/len(goldValue)
+	average = total/len(goldValue)
 
-print("Your total buying power is based on average cost")
-totalBuyingPower = money/average
-print(totalBuyingPower)
+	print("Your total buying power is based on average cost")
+	totalBuyingPower = money/average
+	print(totalBuyingPower)
