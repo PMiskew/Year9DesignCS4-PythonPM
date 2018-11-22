@@ -6,7 +6,7 @@ class App(Frame):
         Frame.__init__(self, master)
         self.columnconfigure(0,weight=1)
         self.rowconfigure(0,weight=1)
-        self.original = Image.open('beautiful.jpg')
+        self.original = Image.open('images/question.png')
         self.image = ImageTk.PhotoImage(self.original)
         self.display = Canvas(self, bd=0, highlightthickness=0)
         self.display.create_image(0, 0, image=self.image, anchor=NW, tags="IMG")
@@ -14,7 +14,6 @@ class App(Frame):
         self.pack(fill=BOTH, expand=1)
         self.bind("<Configure>", self.resize)
 
-        self.display.create_rectangle(10,10,100,100, fill = "red")
     def resize(self, event):
         size = (event.width, event.height)
         resized = self.original.resize(size,Image.ANTIALIAS)
@@ -22,7 +21,7 @@ class App(Frame):
         self.display.delete("IMG")
         self.display.create_image(0, 0, image=self.image, anchor=NW, tags="IMG")
 
-        self.display.create_rectangle(10,10,100,100, fill = "red", alpha = 0.7)
 root = Tk()
 app = App(root)
 app.mainloop()
+root.destroy()

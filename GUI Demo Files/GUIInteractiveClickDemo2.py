@@ -25,6 +25,8 @@ def mouseMove(event):
 
 	x = event.x
 	y = event.y
+	print(x)
+	print(y)
 
 	if (y > 0 and y <= 100):
 		if (x <= 100):
