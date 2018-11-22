@@ -20,18 +20,21 @@ root = tk.Tk()
 
 
 
+#Styles
+ttk.Style().configure('green/black.TButton', foreground='green', bg = "black", height = 20, width = 20)
+
 
 output = tk.Text(root, background = "#ffd0aa", height = 10, width = 50, font = ("Helvitica",16))
 #output.config(state = "disable")
 output.grid(row = 0, column = 0, columnspan = 2)
 
-btnStat1 = tk.Button(root, text = "Stat 1", height = 2, width = 10, command = clicked)
+btnStat1 = ttk.Button(root, text = "Stat 1", style = 'green/black.TButton', command = clicked)
 btnStat1.grid(row = 1, column =0, stick = "NESW")
 
-btnStat2 = tk.Button(root, text = "Stat 2", height = 2, width = 10, command = clicked)
+btnStat2 = ttk.Button(root, text = "Stat 2", style = 'green/black.TButton', command = clicked)
 btnStat2.grid(row = 2, column =0, sticky = "NESW")
 
-btnStat3 = tk.Button(root, text = "Stat 3", height = 2, width = 10, command = clicked)
+btnStat3 = ttk.Button(root, text = "Stat 3", style = 'green/black.TButton', command = clicked)
 btnStat3.grid(row = 3, column =0, sticky = "NESW")
 
 MODES = [
@@ -46,6 +49,6 @@ for r in range(0,len(MODES),1):
 	b = ttk.Radiobutton(root, text=MODES[r][0], variable=v, value=MODES[r][1], command = change)
 	b.grid(row = 1 + r, column = 1, sticky = "W", padx = 40)
 
-btnReduce = tk.Button(root, text = "Reduce Data", height = 2, width = 10, command = clicked)
+btnReduce = ttk.Button(root, text = "Reduce Data", style = 'green/black.TButton', command = clicked)
 btnReduce.grid(row = 3, column = 1, sticky = "NESW")
 root.mainloop()
