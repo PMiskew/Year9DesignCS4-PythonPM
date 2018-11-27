@@ -1,7 +1,7 @@
 #This imports the tkinter "tool box" this contains
 #all the support material to make GUI elements. 
 #by including "as tk" we are giving a short name to use. 
-import tkinter as tk
+mport tkinter as tk
 
 #With the login page all elements are verically aligned 
 #So I am just going to use pack. 
@@ -18,7 +18,7 @@ root = tk.Tk() #creates the standard main window.
 #1. CONSTRUCT the Object:  We build and configure it. 
 #2. Configure the Object:  We specify behaviours and settings (OPTIONAL)
 #3. Pack the Object: Put it in the window
-labUN = tk.Label(root, text = "User Name", font = ("Ariel",20))
+labUN = tk.Label(root, text = "User Name", font = ("Ariel",20), foreground = "#d46a6a")
 #ordered parameters: The order we send them matters. (COMMON)
 #named parameters: JavaScript and Python specific
 labUN.pack()

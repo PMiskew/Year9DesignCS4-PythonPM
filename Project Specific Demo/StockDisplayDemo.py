@@ -1,34 +1,4 @@
 import tkinter as tk
-from tkinter import ttk
-#Group Functions up here
-def change():
-	print("Change")
-
-
-
-def clickedA():
-	print("clicked")
-	
-	btnStat1.config(state = "disabled")
-	btnStat2.config(state = "normal")
-	btnStat3.config(state = "normal")
-
-def clickedB():
-	print("clicked")
-	
-	btnStat1.config(state = "normal")
-	btnStat2.config(state = "disabled")
-	btnStat3.config(state = "normal")
-
-def clickedC():
-	print("clicked")
-	
-	btnStat1.config(state = "normal")
-	btnStat2.config(state = "normal")
-	btnStat3.config(state = "disabled")
-
-def clickedR():
-	print("Clicked R")
 
 #Group Data Variables here!
 names = ["Stock 1","Stock 2","Stock 3","Stock 4"] #Names entered 
